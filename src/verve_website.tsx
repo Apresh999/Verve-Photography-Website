@@ -175,6 +175,12 @@ const Grid = ({ images }: { images: string[] }) => (
       >
         <img
           src={src}
+          srcSet={
+            `${src.replace('w=1600', 'w=400')} 400w, ` +
+            `${src.replace('w=1600', 'w=800')} 800w, ` +
+            `${src.replace('w=1600', 'w=1600')} 1600w`
+          }
+          sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
           alt="Gallery"
           className="h-40 md:h-56 w-full object-cover hover:scale-105 transition duration-700"
         />
@@ -269,6 +275,12 @@ export default function VerveSite() {
                 >
                   <img
                     src={src}
+                    srcSet={
+                      `${src.replace('w=1600', 'w=400')} 400w, ` +
+                      `${src.replace('w=1600', 'w=800')} 800w, ` +
+                      `${src.replace('w=1600', 'w=1600')} 1600w`
+                    }
+                    sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
                     alt="Hero"
                     className="w-full h-full object-cover hover:scale-105 transition duration-700"
                   />
