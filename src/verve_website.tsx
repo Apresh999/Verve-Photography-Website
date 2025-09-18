@@ -193,6 +193,9 @@ export default function VerveSite() {
         <div className="absolute inset-x-0 top-[-20%] h-[40rem] blur-3xl opacity-60 bg-gradient-to-r from-fuchsia-600/30 via-violet-600/20 to-sky-600/30" />
       </div>
 
+      {/* Overlay for readability */}
+      <div className="fixed inset-0 bg-black/60 -z-5 pointer-events-none"></div>
+
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
