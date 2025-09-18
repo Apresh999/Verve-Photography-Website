@@ -31,11 +31,12 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
-    <div className="card">
+
+      <div className="card">
         <h1>My App</h1>
-        <VerveComponent /> {/* 👈 Use the component like this */}
+        <VerveComponent /> 
       </div>
+    </>
   )
 }
 
