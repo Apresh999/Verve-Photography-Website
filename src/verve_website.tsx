@@ -186,7 +186,7 @@ const Grid = ({ images }: { images: string[] }) => (
 
 export default function VerveSite() {
   return (
-    <div className="min-h-screen bg-black text-zinc-100 selection:bg-white selection:text-black">
+    <div className="min-h-screen text-zinc-100 selection:bg-white selection:text-black">
       {/* Background energy gradient */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_10%,rgba(255,255,255,0.08),rgba(0,0,0,0)_60%)]" />
