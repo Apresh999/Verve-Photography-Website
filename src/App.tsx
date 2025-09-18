@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// Import the new component at the top of the file
+import VerveComponent from './verve_high_end_photography_website_react_tailwind (2).jsx'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -29,6 +32,10 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+    <div className="card">
+        <h1>My App</h1>
+        <VerveComponent /> {/* 👈 Use the component like this */}
+      </div>
   )
 }
 
