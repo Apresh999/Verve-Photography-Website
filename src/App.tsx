@@ -11,10 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="card">
-        <h1>My App</h1>
-        <VerveComponent /> 
-      </div>
+      <VerveComponent /> 
     </>
   )
 }
