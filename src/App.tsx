@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // Import the new component at the top of the file
-import VerveComponent from './verve_high_end_photography_website_react_tailwind (2).jsx'
+import VerveComponent from './verve_website.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
