@@ -194,7 +194,7 @@ export default function VerveSite() {
       </div>
 
       {/* Overlay for readability */}
-      <div className="fixed inset-0 bg-black/60 -z-5 pointer-events-none"></div>
+      <div className="fixed inset-0 bg-black/75 -z-5 pointer-events-none"></div>
 
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-white/10">
