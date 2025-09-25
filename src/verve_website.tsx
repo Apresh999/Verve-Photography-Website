@@ -36,8 +36,8 @@ const BRAND = {
   name: "Verve Digital Studios",
   short: "Verve",
   tagline: "Energy in Every Frame",
-  email: "hello@vervestudios.com",
-  phone: "(201) 555‑0199",
+  email: "apreshd@gmail.com",
+  phone: "(201) 561‑2306",
   locations: "Short Hills, NJ · NYC Tri‑State · Travel Worldwide",
   social: {
     instagram: "https://instagram.com/your.verve",
@@ -179,15 +179,6 @@ const gallery = {
       "https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=1600&auto=format&fit=crop",
-    ],
-  },
-  products: {
-    albumUrl: "https://photos.google.com/share/AF1QipPsp5eBIh_QTGSLbykZX3z8_OKuPB1TKO1OfF5ZnClUcarpmtZC2_6DnPTJtbyqXQ",
-    images: [
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1600&auto=format&fit=crop",
     ],
   }
 };
@@ -358,12 +349,6 @@ export default function VerveSite() {
               desc="Architectural clarity and mood‑rich interiors that make spaces irresistible."
               href="#realestate"
             />
-            <ServiceCard
-              icon={Boxes}
-              title="Products"
-              desc="Crisp, brand‑ready imagery that elevates catalogs, ecommerce and campaigns."
-              href="#products"
-            />
           </div>
         </div>
       </section>
@@ -403,19 +388,6 @@ export default function VerveSite() {
           <Grid images={gallery.realestate.images} />
           <div className="text-center">
             <a href={gallery.realestate.albumUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/20 px-5 py-3 hover:bg-white/10 transition text-sm font-medium">
-              View Full Album <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Products */}
-      <section id="products" className="py-16 md:py-24 bg-gradient-to-b from-white/[0.02] to-transparent">
-        <div className="mx-auto max-w-7xl px-4 space-y-10">
-          <SectionHeader kicker="Portfolio" title="Product Photography" subtitle="Precision, texture, and brand‑forward storytelling." />
-          <Grid images={gallery.products.images} />
-          <div className="text-center">
-            <a href={gallery.products.albumUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/20 px-5 py-3 hover:bg-white/10 transition text-sm font-medium">
               View Full Album <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -465,17 +437,6 @@ export default function VerveSite() {
                 "HDR + perspective correction",
                 "Next‑day delivery",
                 "Optional floor plans & drone (add‑on)",
-              ]}
-            />
-            <PriceCard
-              title="Products"
-              price="$25/image+"
-              note="E‑commerce • Catalog • Editorial"
-              features={[
-                "Studio lighting & styling",
-                "Dust cleanup & color accuracy",
-                "Multiple crops per image",
-                "Bulk pricing available",
               ]}
             />
           </div>
@@ -536,7 +497,7 @@ export default function VerveSite() {
             </form>
 
             <div className="rounded-2xl bg-gradient-to-b from-zinc-900/80 to-zinc-950/90 ring-1 ring-white/10 p-6 md:p-8">
-              <h4 className="text-xl font-semibold text-white">Studios & Coverage</h4>
+              <h4 className="text-xl font-semibold text-white">Coverage</h4>
               <p className="mt-2 text-zinc-300/90">{BRAND.locations}</p>
               <div className="mt-6 space-y-4 text-sm">
                 <div className="flex items-center gap-3">
