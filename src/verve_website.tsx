@@ -139,11 +139,14 @@ const gallery = {
   events: {
     albumUrl: "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A",
     images: [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1521316730702-829a8e30dfd8?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1546831336-f24795775f8b?q=80&w=1600&auto=format&fit=crop", // Example of an extra image
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipOcWvhdPU2BimEHT80g-4PyD5kAak3XIisw74B7?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipOj6af_B5mb4qwAT2kVf9tiNKpKylacZxhG4UFM?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNBm-s9ynQxWuFjmJZd4j1wycdNPzog3xpNz8fR?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipMvH5ZNG0qWkEt9qkrVG31Blm6oIsImI-wrZYUo?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNu4UKq8XMpRaW-4y4DVjwWq521DABoRRExLUhG?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNwr1ZY4GtpWAO1mc18Uv_1widNcYooHWxrCkXh?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipPDOUKI101c_96J1fE3goGuNm6BtpHifbGVl-hO?q=80&w=1600&auto=format&fit=crop",
+      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipMzcIsGm9JmV-kxDNkp_oeUkjfW1AjkDPzK82l-?q=80&w=1600&auto=format&fit=crop"
     ],
   },
   portraits: {
