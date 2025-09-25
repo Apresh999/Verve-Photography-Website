@@ -16,7 +16,12 @@ import {
   CalendarDays,
 } from "lucide-react";
 
-import eventphoto1 from "./assets/EventPhotos/A7408740.jpg"
+import eventphoto1 from "./assets/photos/events/eventphoto1.jpg"
+import eventphoto2 from "./assets/photos/events/eventphoto1.jpg"
+import eventphoto3 from "./assets/photos/events/eventphoto2.jpg"
+import eventphoto4 from "./assets/photos/events/eventphoto3.jpg"
+import eventphoto5 from "./assets/photos/events/eventphoto4.jpg"
+import eventphoto6 from "./assets/photos/events/eventphoto5.jpg"
 
 
 // ===================== VERVE – BRAND CONFIG ===================== //
@@ -143,13 +148,11 @@ const gallery = {
     albumUrl: "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A",
     images: [
       eventphoto1,
-      "/EventPhotos/A7409005.jpg?q=80&w=1600&auto=format&fit=crop",
-      "/EventPhotos/IMG_0988.JPG?q=80&w=1600&auto=format&fit=crop",
-      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipMvH5ZNG0qWkEt9qkrVG31Blm6oIsImI-wrZYUo?q=80&w=1600&auto=format&fit=crop",
-      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNu4UKq8XMpRaW-4y4DVjwWq521DABoRRExLUhG?q=80&w=1600&auto=format&fit=crop",
-      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNwr1ZY4GtpWAO1mc18Uv_1widNcYooHWxrCkXh?q=80&w=1600&auto=format&fit=crop",
-      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipPDOUKI101c_96J1fE3goGuNm6BtpHifbGVl-hO?q=80&w=1600&auto=format&fit=crop",
-      "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipMzcIsGm9JmV-kxDNkp_oeUkjfW1AjkDPzK82l-?q=80&w=1600&auto=format&fit=crop"
+      eventphoto2,
+      eventphoto3,
+      eventphoto4,
+      eventphoto5,
+      eventphoto6
     ],
   },
   portraits: {
