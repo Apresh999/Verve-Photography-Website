@@ -235,30 +235,36 @@ export default function VerveSite() {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus('Sending...');
+  e.preventDefault();
+  setStatus('Sending...');
 
-    try {
-      const response = await fetch(appScriptUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.result === 'success') {
-        setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', service: 'Events', message: '' });
-      } else {
-        setStatus(`Error: ${result.message}`);
-      }
-    } catch (error) {
-      setStatus('Failed to send message.');
+  try {
+    // Create URL-encoded data
+    const formDataBody = new URLSearchParams();
+    for (const key in formData) {
+      // @ts-ignore
+      formDataBody.append(key, formData[key]);
     }
-  };
+
+    const response = await fetch(appScriptUrl, {
+      method: 'POST',
+      // DO NOT set 'Content-Type': 'application/json'.
+      // The browser will automatically set the correct header.
+      body: formDataBody,
+    });
+
+    const result = await response.json();
+
+    if (result.result === 'success') {
+      setStatus('Message sent successfully!');
+      setFormData({ name: '', email: '', service: 'Events', message: '' });
+    } else {
+      setStatus(`Error: ${result.message}`);
+    }
+  } catch (error) {
+    setStatus('Failed to send message.');
+  }
+};
   
   return (
     <div className="min-h-screen bg-black/75 text-zinc-100 selection:bg-white selection:text-black">
