@@ -531,7 +531,7 @@ export default function VerveSite() {
               <div className="mt-8 grid grid-cols-2 gap-4 text-xs">
                 <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
                   <p className="text-zinc-400">Turnaround</p>
-                  <p className="text-white mt-1 font-medium">48–72h previews</p>
+                  <p className="text-white mt-1 font-medium">3-4 days previews</p>
                 </div>
                 <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
                   <p className="text-zinc-400">Delivery</p>
