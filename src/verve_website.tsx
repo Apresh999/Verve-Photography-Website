@@ -17,11 +17,11 @@ import {
 } from "lucide-react";
 
 import eventphoto1 from "./assets/photos/events/eventphoto1.jpg"
-import eventphoto2 from "./assets/photos/events/eventphoto1.jpg"
-import eventphoto3 from "./assets/photos/events/eventphoto2.jpg"
-import eventphoto4 from "./assets/photos/events/eventphoto3.jpg"
-import eventphoto5 from "./assets/photos/events/eventphoto4.jpg"
-import eventphoto6 from "./assets/photos/events/eventphoto5.jpg"
+import eventphoto2 from "./assets/photos/events/eventphoto2.jpg"
+import eventphoto3 from "./assets/photos/events/eventphoto3.jpg"
+import eventphoto4 from "./assets/photos/events/eventphoto4.jpg"
+import eventphoto5 from "./assets/photos/events/eventphoto5.jpg"
+import eventphoto6 from "./assets/photos/events/eventphoto6.jpg"
 import potrait1 from "./assets/photos/potraits/potrait1.jpg"
 import potrait2 from "./assets/photos/potraits/potrait2.jpg"
 import potrait3 from "./assets/photos/potraits/potrait3.jpg"
