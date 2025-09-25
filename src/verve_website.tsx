@@ -16,6 +16,9 @@ import {
   CalendarDays,
 } from "lucide-react";
 
+import eventphoto1 from "./assets/EventPhotos/A7408740.jpg?q=80&w=1600&auto=format&fit=crop"
+
+
 // ===================== VERVE – BRAND CONFIG ===================== //
 const BRAND = {
   name: "Verve Digital Studios",
@@ -139,7 +142,7 @@ const gallery = {
   events: {
     albumUrl: "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A",
     images: [
-      "/EventPhotos/A7408740.jpg?q=80&w=1600&auto=format&fit=crop",
+      eventphoto1,
       "/EventPhotos/A7409005.jpg?q=80&w=1600&auto=format&fit=crop",
       "/EventPhotos/IMG_0988.JPG?q=80&w=1600&auto=format&fit=crop",
       "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipMvH5ZNG0qWkEt9qkrVG31Blm6oIsImI-wrZYUo?q=80&w=1600&auto=format&fit=crop",
