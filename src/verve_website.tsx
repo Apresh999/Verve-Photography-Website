@@ -328,7 +328,7 @@ export default function VerveSite() {
             title="High‑End Photography with Verve"
             subtitle="From intimate portraits to large‑scale brand productions, we deliver refined visuals with palpable energy."
           />
-          <div className="mt-10 grid md:grid-cols-4 gap-4 md:gap-6">
+          <div className="mt-10 grid md:grid-cols-3 gap-4 md:gap-6">
             <ServiceCard
               icon={CalendarDays}
               title="Events"
@@ -400,7 +400,7 @@ export default function VerveSite() {
             title="Simple, Transparent Pricing"
             subtitle="Custom quotes available for multi‑day events, brand campaigns, and travel."
           />
-          <div className="mt-10 grid md:grid-cols-4 gap-4 md:gap-6">
+          <div className="mt-10 grid md:grid-cols-3 gap-4 md:gap-6">
             <PriceCard
               title="Events"
               price="$1,499+"
