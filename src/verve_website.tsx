@@ -22,6 +22,13 @@ import eventphoto3 from "./assets/photos/events/eventphoto2.jpg"
 import eventphoto4 from "./assets/photos/events/eventphoto3.jpg"
 import eventphoto5 from "./assets/photos/events/eventphoto4.jpg"
 import eventphoto6 from "./assets/photos/events/eventphoto5.jpg"
+import potrait1 from "./assets/photos/potraits/potrait1.jpg"
+import potrait2 from "./assets/photos/potraits/potrait2.jpg"
+import potrait3 from "./assets/photos/potraits/potrait3.jpg"
+import potrait4 from "./assets/photos/potraits/potrait4.jpg"
+import potrait5 from "./assets/photos/potraits/potrait5.jpg"
+
+
 
 
 // ===================== VERVE – BRAND CONFIG ===================== //
@@ -158,10 +165,11 @@ const gallery = {
   portraits: {
     albumUrl: "https://photos.google.com/share/AF1QipMt0PtLBGPv-U3K4joD9i_uy8U6ch-EmEpixjefdQ8jRr4EIwCjPVHFyu6-S6HUtA",
     images: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1600&auto=format&fit=crop",
+      potrait1,
+      potrait2,
+      potrait3,
+      potrait4,
+      potrait5
     ],
   },
   realestate: {
