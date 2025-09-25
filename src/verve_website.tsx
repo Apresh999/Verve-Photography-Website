@@ -139,9 +139,9 @@ const gallery = {
   events: {
     albumUrl: "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A",
     images: [
-      "/public/EventPhotos/A7408740.jpg?q=80&w=1600&auto=format&fit=crop",
-      "/public/EventPhotos/A7409005.jpg?q=80&w=1600&auto=format&fit=crop",
-      "/public/EventPhotos/IMG_0988.JPG?q=80&w=1600&auto=format&fit=crop",
+      "/EventPhotos/A7408740.jpg?q=80&w=1600&auto=format&fit=crop",
+      "/EventPhotos/A7409005.jpg?q=80&w=1600&auto=format&fit=crop",
+      "/EventPhotos/IMG_0988.JPG?q=80&w=1600&auto=format&fit=crop",
       "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipMvH5ZNG0qWkEt9qkrVG31Blm6oIsImI-wrZYUo?q=80&w=1600&auto=format&fit=crop",
       "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNu4UKq8XMpRaW-4y4DVjwWq521DABoRRExLUhG?q=80&w=1600&auto=format&fit=crop",
       "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A/photo/AF1QipNwr1ZY4GtpWAO1mc18Uv_1widNcYooHWxrCkXh?q=80&w=1600&auto=format&fit=crop",
