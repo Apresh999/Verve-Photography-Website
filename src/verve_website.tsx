@@ -176,7 +176,7 @@ const gallery = {
 };
 
 // ===================== NEW: SHUFFLE & GRID LOGIC ===================== //
-const shuffleArray = (array) => {
+const shuffleArray = (array: string[]): string[] => { // MODIFIED: Added types
   let shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -185,33 +185,37 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-const Grid = ({ images }: { images: string[] }) => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-    {images.map((src, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, delay: i * 0.05 }}
-        className="relative overflow-hidden rounded-2xl ring-1 ring-white/10"
-      >
-        <img
-          src={src}
-          srcSet={
-            `${src.replace('w=1600', 'w=400')} 400w, ` +
-            `${src.replace('w=1600', 'w=800')} 800w, ` +
-            `${src.replace('w=1600', 'w=1600')} 1600w`
-          }
-          sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
-          alt="Gallery"
-          className="h-40 md:h-56 w-full object-cover hover:scale-105 transition duration-700"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </motion.div>
-    ))}
-  </div>
-);
+const Grid = ({ images }: { images: string[] }) => { // MODIFIED: Added types for props
+  const randomImages = React.useMemo(() => shuffleArray(images).slice(0, 4), [images]);
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      {randomImages.map((src, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, delay: i * 0.05 }}
+          className="relative overflow-hidden rounded-2xl ring-1 ring-white/10"
+        >
+          <img
+            src={src}
+            srcSet={
+              `${src.replace('w=1600', 'w=400')} 400w, ` +
+              `${src.replace('w=1600', 'w=800')} 800w, ` +
+              `${src.replace('w=1600', 'w=1600')} 1600w`
+            }
+            sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
+            alt="Gallery"
+            className="h-40 md:h-56 w-full object-cover hover:scale-105 transition duration-700"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        </motion.div>
+      ))}
+    </div>
+  );
+};
 
 export default function VerveSite() {
   return (
