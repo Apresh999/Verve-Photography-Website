@@ -191,7 +191,7 @@ const shuffleArray = (array: string[]): string[] => { // MODIFIED: Added types
   return shuffled;
 };
 
-const Grid = ({ images }: { images: string[] }) => { // MODIFIED: Added types for props
+const Grid = ({ images }: { images: string[] }) => {
   const randomImages = React.useMemo(() => shuffleArray(images).slice(0, 4), [images]);
 
   return (
@@ -206,14 +206,9 @@ const Grid = ({ images }: { images: string[] }) => { // MODIFIED: Added types fo
           className="relative overflow-hidden rounded-2xl ring-1 ring-white/10"
         >
           <img
-            src={src}
-            srcSet={
-              `${src.replace('w=1600', 'w=400')} 400w, ` +
-              `${src.replace('w=1600', 'w=800')} 800w, ` +
-              `${src.replace('w=1600', 'w=1600')} 1600w`
-            }
-            sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
+            src={src} // This `src` now holds the imported image URL (e.g., '/assets/EventPhotos/A7409005.jpg')
             alt="Gallery"
+            // Remove srcSet and sizes attributes as they were for external image services
             className="h-40 md:h-56 w-full object-cover hover:scale-105 transition duration-700"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
