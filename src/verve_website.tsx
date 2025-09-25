@@ -259,8 +259,7 @@ export default function VerveSite() {
       setStatus('Failed to send message.');
     }
   };
-
-export default function VerveSite() {
+  
   return (
     <div className="min-h-screen bg-black/75 text-zinc-100 selection:bg-white selection:text-black">
       {/* Background energy gradient */}
