@@ -11,7 +11,6 @@ import {
   Linkedin,
   ArrowRight,
   Building2,
-  Boxes,
   Users,
   CalendarDays,
 } from "lucide-react";
