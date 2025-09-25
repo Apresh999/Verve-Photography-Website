@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import { motion } from "framer-motion";
 import {
   Aperture,
@@ -230,11 +230,11 @@ export default function VerveSite() {
 
   const appScriptUrl = 'https://script.google.com/macros/s/AKfycbySs8uzLK25XP73oWGPtrgn-va20YpHkv4XMIJGXm6z3hIsHacfhm3aBDTdQgPGton5/exec';
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('Sending...');
 
