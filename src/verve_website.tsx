@@ -51,7 +51,6 @@ const nav = [
   { label: "Events", href: "#events" },
   { label: "Portraits", href: "#portraits" },
   { label: "Real Estate", href: "#realestate" },
-  { label: "Products", href: "#products" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
