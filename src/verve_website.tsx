@@ -16,7 +16,7 @@ import {
   CalendarDays,
 } from "lucide-react";
 
-import eventphoto1 from "./assets/EventPhotos/A7408740.jpg?q=80&w=1600&auto=format&fit=crop"
+import eventphoto1 from "./assets/EventPhotos/A7408740.jpg"
 
 
 // ===================== VERVE – BRAND CONFIG ===================== //
