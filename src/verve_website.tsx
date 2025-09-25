@@ -136,30 +136,53 @@ const PriceCard = ({
 );
 
 const gallery = {
-  events: [
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1521316730702-829a8e30dfd8?q=80&w=1600&auto=format&fit=crop",
-  ],
-  portraits: [
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1600&auto=format&fit=crop",
-  ],
-  realestate: [
-    "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=1600&auto=format&fit=crop",
-  ],
-  products: [
-    "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=1600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1600&auto=format&fit=crop",
-  ],
+  events: {
+    albumUrl: "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A",
+    images: [
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521316730702-829a8e30dfd8?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1546831336-f24795775f8b?q=80&w=1600&auto=format&fit=crop", // Example of an extra image
+    ],
+  },
+  portraits: {
+    albumUrl: "https://photos.google.com/share/AF1QipMt0PtLBGPv-U3K4joD9i_uy8U6ch-EmEpixjefdQ8jRr4EIwCjPVHFyu6-S6HUtA",
+    images: [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1600&auto=format&fit=crop",
+    ],
+  },
+  realestate: {
+    albumUrl: "https://photos.google.com/share/AF1QipMbN6xKBjlWxHWQb1TMGh7OFW_nu_0yb1VQU5mExfyQYViL6JkXq1frftpBGguh-w", // Your example link
+    images: [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=1600&auto=format&fit=crop",
+    ],
+  },
+  products: {
+    albumUrl: "https://photos.google.com/share/AF1QipPsp5eBIh_QTGSLbykZX3z8_OKuPB1TKO1OfF5ZnClUcarpmtZC2_6DnPTJtbyqXQ",
+    images: [
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1600&auto=format&fit=crop",
+    ],
+  }
+};
+
+// ===================== NEW: SHUFFLE & GRID LOGIC ===================== //
+const shuffleArray = (array) => {
+  let shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
 };
 
 const Grid = ({ images }: { images: string[] }) => (
@@ -329,51 +352,57 @@ export default function VerveSite() {
         </div>
       </section>
 
+       {/* ===================== MODIFIED PORTFOLIO SECTIONS ===================== */}
+      
       {/* Events */}
       <section id="events" className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 space-y-10">
-          <SectionHeader
-            kicker="Portfolio"
-            title="Events"
-            subtitle="Electric atmospheres, authentic moments, and editorial polish."
-          />
-          <Grid images={gallery.events} />
+          <SectionHeader kicker="Portfolio" title="Events" subtitle="Electric atmospheres, authentic moments, and editorial polish." />
+          <Grid images={gallery.events.images} />
+          <div className="text-center">
+            <a href={gallery.events.albumUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/20 px-5 py-3 hover:bg-white/10 transition text-sm font-medium">
+              View Full Album <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Portraits */}
       <section id="portraits" className="py-16 md:py-24 bg-gradient-to-b from-white/[0.02] to-transparent">
         <div className="mx-auto max-w-7xl px-4 space-y-10">
-          <SectionHeader
-            kicker="Portfolio"
-            title="Portraits"
-            subtitle="Confident, luminous, and unmistakably you."
-          />
-          <Grid images={gallery.portraits} />
+          <SectionHeader kicker="Portfolio" title="Portraits" subtitle="Confident, luminous, and unmistakably you." />
+          <Grid images={gallery.portraits.images} />
+          <div className="text-center">
+            <a href={gallery.portraits.albumUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/20 px-5 py-3 hover:bg-white/10 transition text-sm font-medium">
+              View Full Album <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Real Estate */}
       <section id="realestate" className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 space-y-10">
-          <SectionHeader
-            kicker="Portfolio"
-            title="Real Estate"
-            subtitle="Architecture and interiors, distilled into desire."
-          />
-          <Grid images={gallery.realestate} />
+          <SectionHeader kicker="Portfolio" title="Real Estate" subtitle="Architecture and interiors, distilled into desire." />
+          <Grid images={gallery.realestate.images} />
+          <div className="text-center">
+            <a href={gallery.realestate.albumUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/20 px-5 py-3 hover:bg-white/10 transition text-sm font-medium">
+              View Full Album <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Products */}
       <section id="products" className="py-16 md:py-24 bg-gradient-to-b from-white/[0.02] to-transparent">
         <div className="mx-auto max-w-7xl px-4 space-y-10">
-          <SectionHeader
-            kicker="Portfolio"
-            title="Product Photography"
-            subtitle="Precision, texture, and brand‑forward storytelling."
-          />
-          <Grid images={gallery.products} />
+          <SectionHeader kicker="Portfolio" title="Product Photography" subtitle="Precision, texture, and brand‑forward storytelling." />
+          <Grid images={gallery.products.images} />
+          <div className="text-center">
+            <a href={gallery.products.albumUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl ring-1 ring-white/20 px-5 py-3 hover:bg-white/10 transition text-sm font-medium">
+              View Full Album <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
