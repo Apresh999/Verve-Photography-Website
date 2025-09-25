@@ -219,6 +219,48 @@ const Grid = ({ images }: { images: string[] }) => {
 };
 
 export default function VerveSite() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    service: 'Events',
+    message: '',
+  });
+
+  const [status, setStatus] = useState('');
+
+  const appScriptUrl = 'https://script.google.com/macros/s/AKfycbySs8uzLK25XP73oWGPtrgn-va20YpHkv4XMIJGXm6z3hIsHacfhm3aBDTdQgPGton5/exec';
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch(appScriptUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.result === 'success') {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', service: 'Events', message: '' });
+      } else {
+        setStatus(`Error: ${result.message}`);
+      }
+    } catch (error) {
+      setStatus('Failed to send message.');
+    }
+  };
+
+export default function VerveSite() {
   return (
     <div className="min-h-screen bg-black/75 text-zinc-100 selection:bg-white selection:text-black">
       {/* Background energy gradient */}
@@ -453,26 +495,41 @@ export default function VerveSite() {
             subtitle="Tell us about your event, brand, or project. We’ll tailor a package that fits your vision."
           />
           <div className="mt-10 grid md:grid-cols-2 gap-6">
-            <form onSubmit={(e) => e.preventDefault()} className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 md:p-8">
+            <form onSubmit={handleSubmit} className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm text-zinc-300">Name</label>
+                  <label htmlFor="name" className="text-sm text-zinc-300">Name</label>
                   <input
+                    id="name"
+                    name="name"
+                    type="text"
                     className="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
                     placeholder="Your name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
-                  <label className="text-sm text-zinc-300">Email</label>
+                  <label htmlFor="email" className="text-sm text-zinc-300">Email</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
                     className="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
                     placeholder="you@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label className="text-sm text-zinc-300">Service</label>
-                  <select className="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                  <label htmlFor="service" className="text-sm text-zinc-300">Service</label>
+                  <select
+                    id="service"
+                    name="service"
+                    className="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                    value={formData.service}
+                    onChange={handleChange}
+                  >
                     <option>Events</option>
                     <option>Portraits</option>
                     <option>Real Estate</option>
@@ -481,17 +538,22 @@ export default function VerveSite() {
                   </select>
                 </div>
                 <div className="md:col-span-2">
-                  <label className="text-sm text-zinc-300">Message</label>
+                  <label htmlFor="message" className="text-sm text-zinc-300">Message</label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows={5}
                     className="mt-1 w-full rounded-xl bg-black/40 border border-white/10 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
                     placeholder="Tell us about your shoot…"
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
-              <button className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white text-black px-5 py-3 font-medium hover:opacity-90 transition">
+              <button type="submit" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white text-black px-5 py-3 font-medium hover:opacity-90 transition">
                 Send Inquiry <Send className="h-4 w-4" />
               </button>
+              <p className="mt-4 text-sm text-center text-zinc-400">{status}</p>
             </form>
 
             <div className="rounded-2xl bg-gradient-to-b from-zinc-900/80 to-zinc-950/90 ring-1 ring-white/10 p-6 md:p-8">
