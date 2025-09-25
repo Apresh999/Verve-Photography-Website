@@ -239,18 +239,18 @@ export default function VerveSite() {
   setStatus('Sending...');
 
   try {
-    // Create URL-encoded data
-    const formDataBody = new URLSearchParams();
-    for (const key in formData) {
-      // @ts-ignore
-      formDataBody.append(key, formData[key]);
-    }
+    // Create a FormData object from the form fields
+    const formDataObject = new FormData();
+    formDataObject.append('name', formData.name);
+    formDataObject.append('email', formData.email);
+    formDataObject.append('service', formData.service);
+    formDataObject.append('message', formData.message);
 
     const response = await fetch(appScriptUrl, {
       method: 'POST',
-      // DO NOT set 'Content-Type': 'application/json'.
-      // The browser will automatically set the correct header.
-      body: formDataBody,
+      // The browser will automatically set the correct 'Content-Type' header
+      // for FormData, which prevents the CORS preflight issue.
+      body: formDataObject,
     });
 
     const result = await response.json();
