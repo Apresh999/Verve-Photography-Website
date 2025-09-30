@@ -29,9 +29,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: 'gh-pages/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Add CNAME file
-        run: echo "verve.photography" > ./dist/CNAME
+        run: echo "verve.photography" > gh-pages/dist/CNAME
