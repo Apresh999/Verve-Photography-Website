@@ -450,7 +450,6 @@ export default function VerveSite() {
           <div className="mt-10 grid md:grid-cols-3 gap-4 md:gap-6">
             <PriceCard
               title="Events"
-              price="$1,499+"
               note="Weddings • Corporate • Galas"
               features={[
                 "Up to 6 hours coverage",
@@ -462,7 +461,6 @@ export default function VerveSite() {
             />
             <PriceCard
               title="Portraits"
-              price="$399+"
               note="Headshots • Lifestyle • Family"
               features={[
                 "60–90 minute session",
@@ -475,7 +473,6 @@ export default function VerveSite() {
             />
             <PriceCard
               title="Real Estate"
-              price="$299+"
               note="Residential • Commercial"
               features={[
                 "Interior + exterior coverage",
