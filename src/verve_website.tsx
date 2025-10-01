@@ -317,7 +317,7 @@ export default function VerveSite() {
                 {BRAND.tagline.split(" ")[0]} in Every <span className="inline-block bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Frame</span>
               </motion.h1>
               <p className="mt-5 text-zinc-300/90 leading-relaxed max-w-xl">
-                {BRAND.short} is a virtual studio blending passion and precision across events, portraits, real estate and product photography. We craft bold visuals that move audiences.
+                {BRAND.short} is a virtual studio blending passion and precision across events, portraits and real estate photography. We craft bold visuals that move audiences.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
@@ -377,7 +377,7 @@ export default function VerveSite() {
           <SectionHeader
             kicker="What We Do"
             title="High‑End Photography with Verve"
-            subtitle="From intimate portraits to large‑scale brand productions, we deliver refined visuals with palpable energy."
+            subtitle="From intimate portraits to community events, we deliver refined visuals with palpable energy."
           />
           <div className="mt-10 grid md:grid-cols-3 gap-4 md:gap-6">
             <ServiceCard
@@ -539,7 +539,6 @@ export default function VerveSite() {
                     <option>Events</option>
                     <option>Portraits</option>
                     <option>Real Estate</option>
-                    <option>Product</option>
                     <option>Other</option>
                   </select>
                 </div>
