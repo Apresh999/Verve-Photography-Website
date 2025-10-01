@@ -8,7 +8,6 @@ import {
   Mail,
   Instagram,
   Facebook,
-  Linkedin,
   ArrowRight,
   Building2,
   Users,
@@ -583,12 +582,6 @@ export default function VerveSite() {
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a
-                  href={BRAND.social.linkedin}
-                  className="inline-flex items-center justify-center h-10 w-10 rounded-full ring-1 ring-white/15 hover:bg-white/10"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-4 text-xs">
                 <div className="rounded-xl bg-white/5 ring-1 ring-white/10 p-4">
@@ -626,12 +619,6 @@ export default function VerveSite() {
               className="inline-flex items-center justify-center h-9 w-9 rounded-full ring-1 ring-white/15 hover:bg-white/10"
             >
               <Facebook className="h-4 w-4 text-white" />
-            </a>
-            <a
-              href={BRAND.social.linkedin}
-              className="inline-flex items-center justify-center h-9 w-9 rounded-full ring-1 ring-white/15 hover:bg-white/10"
-            >
-              <Linkedin className="h-4 w-4 text-white" />
             </a>
             <span className="text-xs text-zinc-400">© {new Date().getFullYear()} {BRAND.short} · {BRAND.tagline}</span>
           </div>
