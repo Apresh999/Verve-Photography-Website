@@ -376,7 +376,7 @@ export default function VerveSite() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionHeader
             kicker="What We Do"
-            title="High‑End Photography with Verve"
+            title="Timeless Visuals with Verve"
             subtitle="From intimate portraits to community events, we deliver refined visuals with palpable energy."
           />
           <div className="mt-10 grid md:grid-cols-3 gap-4 md:gap-6">
