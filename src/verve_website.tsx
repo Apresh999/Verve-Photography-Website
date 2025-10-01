@@ -256,7 +256,7 @@ export default function VerveSite() {
       body: formDataObject,
     });
 
-    const result = await response.json();
+    //const result = await response.json();
 
     if (response.ok) { // Check if the status is 200-299
       setStatus('Message sent successfully! ✅');
