@@ -317,7 +317,7 @@ export default function VerveSite() {
                 {BRAND.tagline.split(" ")[0]} in Every <span className="inline-block bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Frame</span>
               </motion.h1>
               <p className="mt-5 text-zinc-300/90 leading-relaxed max-w-xl">
-                {BRAND.short} is a high‑end virtual studio blending passion and precision across events, portraits, real estate and product photography. We craft bold visuals that move audiences and elevate brands.
+                {BRAND.short} is a virtual studio blending passion and precision across events, portraits, real estate and product photography. We craft bold visuals that move audiences.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
