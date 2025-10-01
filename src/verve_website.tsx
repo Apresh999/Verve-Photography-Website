@@ -231,7 +231,7 @@ export default function VerveSite() {
 
   const [status, setStatus] = useState('');
 
-  const appScriptUrl = 'https://script.google.com/macros/s/AKfycbySs8uzLK25XP73oWGPtrgn-va20YpHkv4XMIJGXm6z3hIsHacfhm3aBDTdQgPGton5/exec';
+  const appScriptUrl = 'https://hook.us1.make.com/jrb2irtlqy7a4ihemtmure2msyq83l9k';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
