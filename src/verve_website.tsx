@@ -111,13 +111,11 @@ const ServiceCard = ({
 
 const PriceCard = ({
   title,
-  price,
   note,
   features,
   highlight = false,
 }: {
   title: string;
-  price: string;
   note?: string;
   features: string[];
   highlight?: boolean;
@@ -132,7 +130,6 @@ const PriceCard = ({
   >
     <div className="flex items-baseline justify-between">
       <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <div className="text-2xl font-semibold text-white">{price}</div>
     </div>
     {note && <p className="mt-1 text-xs text-zinc-400">{note}</p>}
     <ul className="mt-4 space-y-2 text-sm text-zinc-300/90 list-disc list-inside">
