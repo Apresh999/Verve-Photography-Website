@@ -441,8 +441,8 @@ export default function VerveSite() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionHeader
             kicker="Packages"
-            title="Simple, Transparent Pricing"
-            subtitle="Custom quotes available for multi‑day events, brand campaigns, and travel."
+            title="Simple & Easy Pricing"
+            subtitle="Custom quotes available for events, brand campaigns, and travel."
           />
           <div className="mt-10 grid md:grid-cols-3 gap-4 md:gap-6">
             <PriceCard
@@ -480,7 +480,7 @@ export default function VerveSite() {
             />
           </div>
           <p className="mt-6 text-center text-sm text-zinc-400">
-            All packages include basic color grading and a private gallery. Travel fees may apply outside the NYC tri‑state area.
+            All packages include basic color grading and a private gallery. Travel fees may apply.
           </p>
         </div>
       </section>
