@@ -59,7 +59,7 @@ const nav = [
 
 // Hero mosaic (replace with your shots)
 const heroImages = [
-  hero1, hero2, hero3, hero4
+  hero1, hero2, hero4, hero3 // poistion of the image is important
 ];
 
 const SectionHeader = ({
