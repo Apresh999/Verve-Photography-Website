@@ -44,9 +44,8 @@ const BRAND = {
   phone: "(201) 561‑2306",
   locations: "Short Hills, NJ · NYC Tri‑State · Travel Worldwide",
   social: {
-    instagram: "https://instagram.com/your.verve",
-    facebook: "https://facebook.com/your.verve",
-    linkedin: "https://linkedin.com/company/your-verve",
+    instagram: "https://www.instagram.com/verve.photography_njny",
+    facebook: "https://www.facebook.com/profile.php?id=61581579122102"
   },
 };
 
