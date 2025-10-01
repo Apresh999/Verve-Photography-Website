@@ -27,6 +27,11 @@ import potrait3 from "./assets/photos/potraits/potrait3.jpg"
 import potrait4 from "./assets/photos/potraits/potrait4.jpg"
 import potrait5 from "./assets/photos/potraits/potrait5.jpg"
 
+import hero1 from "./assets/photos/hero/Hero_Image_1.jpeg"
+import hero2 from "./assets/photos/hero/Hero_Image_2.jpeg"
+import hero3 from "./assets/photos/hero/Hero_Image_3.jpeg"
+import hero4 from "./assets/photos/hero/Hero_Image_4.jpeg"
+
 
 
 
@@ -56,10 +61,7 @@ const nav = [
 
 // Hero mosaic (replace with your shots)
 const heroImages = [
-  "https://images.unsplash.com/photo-1508898578281-774ac4893bd0?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1600&auto=format&fit=crop",
+  hero1, hero2, hero3, hero4
 ];
 
 const SectionHeader = ({
