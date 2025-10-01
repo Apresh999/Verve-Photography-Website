@@ -238,8 +238,8 @@ export default function VerveSite() {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setStatus('Sending...');
+  e.preventDefault();
+  setStatus('Sending...');
 
   try {
     // Create a FormData object from the form fields
@@ -258,12 +258,13 @@ export default function VerveSite() {
 
     const result = await response.json();
 
-    if (result.result === 'success') {
-      setStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', service: 'Events', message: '' });
-    } else {
-      setStatus(`Error: ${result.message}`);
-    }
+    if (response.ok) { // Check if the status is 200-299
+      setStatus('Message sent successfully! ✅');
+      setFormData({ name: '', email: '', service: 'Events', message: '' });
+    } else {
+      // Use response.status for the error code (e.g., 410, 404, 500)
+      setStatus(`Error: Webhook failed with status ${response.status}. Please check your Make.com scenario.`);
+    }
   } catch (error) {
     setStatus('Failed to send message.');
   }
@@ -353,12 +354,12 @@ export default function VerveSite() {
                 >
                   <img
                     src={src}
-                    srcSet={
-                      `${src.replace('w=1600', 'w=400')} 400w, ` +
-                      `${src.replace('w=1600', 'w=800')} 800w, ` +
-                      `${src.replace('w=1600', 'w=1600')} 1600w`
-                    }
-                    sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
+                    //srcSet={
+                    //  `${src.replace('w=1600', 'w=400')} 400w, ` +
+                    //  `${src.replace('w=1600', 'w=800')} 800w, ` +
+                    //  `${src.replace('w=1600', 'w=1600')} 1600w`
+                    //}
+                    //sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1600px"
                     alt="Hero"
                     className="w-full h-full object-cover hover:scale-105 transition duration-700"
                   />
