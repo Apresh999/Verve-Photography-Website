@@ -25,6 +25,11 @@ import potrait2 from "./assets/photos/potraits/potrait2.jpg"
 import potrait3 from "./assets/photos/potraits/potrait3.jpg"
 import potrait4 from "./assets/photos/potraits/potrait4.jpg"
 import potrait5 from "./assets/photos/potraits/potrait5.jpg"
+import realestate1 from "./assets/photos/realestate/realestate1.jpeg"
+import realestate2 from "./assets/photos/realestate/realestate2.jpeg"
+import realestate3 from "./assets/photos/realestate/realestate3.jpeg"
+import realestate4 from "./assets/photos/realestate/realestate4.jpeg"
+import realestate5 from "./assets/photos/realestate/realestate5.jpeg"
 
 import hero1 from "./assets/photos/hero/Hero_Image_1.jpeg"
 import hero2 from "./assets/photos/hero/Hero_Image_2.jpeg"
@@ -170,10 +175,11 @@ const gallery = {
   realestate: {
     albumUrl: "https://photos.google.com/share/AF1QipMbN6xKBjlWxHWQb1TMGh7OFW_nu_0yb1VQU5mExfyQYViL6JkXq1frftpBGguh-w", // Your example link
     images: [
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=1600&auto=format&fit=crop",
+      realestate1,
+      realestate2,
+      realestate3,
+      realestate4,
+      realestate5
     ],
   }
 };
@@ -310,7 +316,7 @@ export default function VerveSite() {
                 {BRAND.tagline.split(" ")[0]} in Every <span className="inline-block bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Frame</span>
               </motion.h1>
               <p className="mt-5 text-zinc-300/90 leading-relaxed max-w-xl">
-                {BRAND.short} is a high‑end studio blending passion and precision across events, portraits, real estate and product photography. We craft bold visuals that move audiences and elevate brands.
+                {BRAND.short} is a high‑end virtual studio blending passion and precision across events, portraits, real estate and product photography. We craft bold visuals that move audiences and elevate brands.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
