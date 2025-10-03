@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 
-import verveLogo from "./assets/photos/verve_photography_logo.png";
+import verveLogo from "./assets/photos/verve_photography_logo_1.png";
 
 
 import eventphoto1 from "./assets/photos/events/eventphoto1.jpg"
