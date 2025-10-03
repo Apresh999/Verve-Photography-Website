@@ -287,7 +287,7 @@ export default function VerveSite() {
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
             {/* START OF HEADER LOGO CHANGE */}
-            <div className="h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/5 grid place-items-center shadow-lg">
+            <div className="h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/5 grid place-items-center shadow-lg bg-white">
               <img 
                 src={verveLogo} 
                 alt={`${BRAND.short} Logo`} 
