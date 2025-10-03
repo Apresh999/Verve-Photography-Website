@@ -14,6 +14,10 @@ import {
   CalendarDays,
 } from "lucide-react";
 
+
+import verveLogo from "./assets/photos/verve_photography_logo.png";
+
+
 import eventphoto1 from "./assets/photos/events/eventphoto1.jpg"
 import eventphoto2 from "./assets/photos/events/eventphoto2.jpg"
 import eventphoto3 from "./assets/photos/events/eventphoto3.jpg"
@@ -282,9 +286,15 @@ export default function VerveSite() {
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-sky-500 grid place-items-center shadow-lg">
-              <Aperture className="h-5 w-5 text-white" />
-            </div>
+            {/* START OF HEADER LOGO CHANGE */}
+            <div className="h-10 w-10 overflow-hidden rounded-full ring-1 ring-white/20 grid place-items-center shadow-lg">
+              <img 
+                src={verveLogo} 
+                alt={`${BRAND.short} Logo`} 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            {/* END OF HEADER LOGO CHANGE */}
             <span className="font-bold tracking-tight text-white text-xl uppercase">{BRAND.short}</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
