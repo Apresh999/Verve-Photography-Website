@@ -287,7 +287,7 @@ export default function VerveSite() {
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
             {/* START OF HEADER LOGO CHANGE */}
-            <div className="h-10 w-10 overflow-hidden rounded-full grid place-items-center shadow-lg bg-white">
+            <div className="h-10 w-10 overflow-hidden rounded-full grid place-items-center shadow-lg">
               <img 
                 src={verveLogo} 
                 alt={`${BRAND.short} Logo`} 
@@ -618,9 +618,15 @@ export default function VerveSite() {
       <footer className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-full bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-sky-500 grid place-items-center shadow-md">
-              <Aperture className="h-4 w-4 text-white" />
-            </div>
+            {/* START OF HEADER LOGO CHANGE */}
+            <div className="h-10 w-10 overflow-hidden rounded-full grid place-items-center shadow-lg">
+              <img 
+                src={verveLogo} 
+                alt={`${BRAND.short} Logo`} 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            {/* END OF HEADER LOGO CHANGE */}
             <span className="text-sm text-zinc-300 font-semibold uppercase tracking-wide">{BRAND.name}</span>
           </div>
           <div className="flex items-center gap-4">
