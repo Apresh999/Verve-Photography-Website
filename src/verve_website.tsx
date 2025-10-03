@@ -152,7 +152,7 @@ const PriceCard = ({
 
 const gallery = {
   events: {
-    albumUrl: "https://photos.google.com/share/AF1QipM3OO4PSIy-qjDHoAjzTwpVxi0L6KQPua3PTbgiI5_lJkKn10OH08VSB7UKSi-05A",
+    albumUrl: "https://photos.app.goo.gl/BvxYBgHBQ7eTZmHr6",
     images: [
       eventphoto1,
       eventphoto2,
@@ -163,7 +163,7 @@ const gallery = {
     ],
   },
   portraits: {
-    albumUrl: "https://photos.google.com/share/AF1QipMt0PtLBGPv-U3K4joD9i_uy8U6ch-EmEpixjefdQ8jRr4EIwCjPVHFyu6-S6HUtA",
+    albumUrl: "https://photos.app.goo.gl/phSRs5TttbYhDHqA7",
     images: [
       potrait1,
       potrait2,
@@ -173,7 +173,7 @@ const gallery = {
     ],
   },
   realestate: {
-    albumUrl: "https://photos.google.com/share/AF1QipMbN6xKBjlWxHWQb1TMGh7OFW_nu_0yb1VQU5mExfyQYViL6JkXq1frftpBGguh-w", // Your example link
+    albumUrl: "https://photos.app.goo.gl/kEAFyEqZKBW6r5Qe7", // Your example link
     images: [
       realestate1,
       realestate2,
