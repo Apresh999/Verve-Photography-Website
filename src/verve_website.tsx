@@ -263,9 +263,18 @@ const faqs = [
     },
 ];
 
-const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }: FAQItemProps) => {
+const FAQItem = ({ question, answer, index, openIndex, setOpenIndex: _setOpenIndex }: FAQItemProps) => {
     // Check if this specific item is open
     const isOpen = openIndex === index;
+
+    // Check if this specific item is open
+    const isOpen = openIndex === index;
+
+    // Function to toggle the state (open/close)
+    const toggleFAQ = () => {
+        // Now use the renamed variable in the function body
+        _setOpenIndex(isOpen ? null : index);
+    };
 
     // ... (toggleFAQ function remains the same)
 
