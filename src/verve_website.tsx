@@ -70,6 +70,16 @@ const heroImages = [
   hero1, hero2, hero4, hero3 // poistion of the image is important
 ];
 
+// --- START: NEW FAQ CODE/INTEGRATION (Interface) ---
+interface FAQItemProps {
+  question: string;
+  answer: string;
+  index: number;
+  openIndex: number | null;
+  setOpenIndex: React.Dispatch<React.SetStateAction<number | null>>;
+}
+// --- END: NEW FAQ CODE/INTEGRATION (Interface) ---
+
 const SectionHeader = ({
   kicker,
   title,
@@ -253,13 +263,14 @@ const faqs = [
     },
 ];
 
-const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
+// Corrected component with TypeScript interface
+const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }: FAQItemProps) => {
     // Check if this specific item is open
     const isOpen = openIndex === index;
 
     // Function to toggle the state (open/close)
     const toggleFAQ = () => {
-        // If it's already open, close it (set to null/undefined). Otherwise, open this item's index.
+        // If it's already open, close it (set to null). Otherwise, open this item's index.
         setOpenIndex(isOpen ? null : index);
     };
 
@@ -299,7 +310,7 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
 
 const FAQSection = () => {
     // State to manage which FAQ item is currently open. Start with 'null' so all are collapsed.
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <section id="faq" className="py-16 md:py-24">
@@ -325,6 +336,8 @@ const FAQSection = () => {
         </section>
     );
 };
+
+// --- END: NEW FAQ CODE/INTEGRATION (Content and Components) ---
 
 
 export default function VerveSite() {
