@@ -62,6 +62,7 @@ const nav = [
   { label: "Portraits", href: "#portraits" },
   { label: "Real Estate", href: "#realestate" },
   { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -263,29 +264,27 @@ const faqs = [
     },
 ];
 
-const FAQItem = ({ question, answer, index, openIndex, setOpenIndex: _setOpenIndex }: FAQItemProps) => {
-    // Check if this specific item is open
+const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }: FAQItemProps) => {
+    // Check if this specific item is open (Only declare once)
     const isOpen = openIndex === index;
-
-    // Check if this specific item is open
-    const isOpen = openIndex === index;
-
-    // Function to toggle the state (open/close)
-    const toggleFAQ = () => {
-        // Now use the renamed variable in the function body
-        _setOpenIndex(isOpen ? null : index);
-    };
-
-    // ... (toggleFAQ function remains the same)
-
+    
+    // REMOVE the redundant second 'const isOpen = openIndex === index;'
+    // REMOVE the 'toggleFAQ' function completely
+    
     return (
         <motion.div
-            // ... (motion props remain the same)
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="faq-item rounded-2xl bg-white/5 ring-1 ring-white/10 mb-3 overflow-hidden"
         >
-            {/* Button remains the same */}
             <button
-                // ... (button styling remains the same)
+                className="w-full flex justify-between items-center text-left p-4 md:p-5 font-semibold text-white hover:bg-white/10 transition"
+                // FIX: Use setOpenIndex directly in the inline onClick handler
+                onClick={() => setOpenIndex(isOpen ? null : index)}
+                aria-expanded={isOpen}
+                aria-controls={`faq-answer-${index}`}
             >
                 <span dangerouslySetInnerHTML={{ __html: question }} />
                 <span className={`text-xl transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
@@ -294,17 +293,11 @@ const FAQItem = ({ question, answer, index, openIndex, setOpenIndex: _setOpenInd
             </button>
 
             {/* The collapsing content container */}
-            {/* The 'max-h-0' and 'max-h-[500px]' control the animation.
-               We need to ensure the inner content container has proper padding and a visible background when open.
-            */}
             <div
                 id={`faq-answer-${index}`}
                 // The transition classes look correct for animation
                 className={`transition-[max-height,padding] duration-500 ease-in-out ${isOpen ? 'max-h-[500px] p-4 md:p-5 pt-0' : 'max-h-0'}`}
             >
-                {/* This is the content itself. 
-                   We move the left/right padding and background here for visual clarity. 
-                */}
                 <div
                     // Add a slight background, more padding, and remove the top padding from the collapsing div
                     className="text-zinc-300/90 leading-relaxed pt-4 border-t border-white/10"
