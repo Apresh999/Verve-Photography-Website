@@ -224,6 +224,109 @@ const Grid = ({ images }: { images: string[] }) => {
   );
 };
 
+// ===================== NEW: FAQ CONTENT AND COMPONENTS ===================== //
+
+const faqs = [
+    {
+        question: "Do you offer luxury photography services specifically in Short Hills and Millburn, NJ?",
+        answer: "Yes! We specialize in premium **event, portrait, and luxury real estate photography** right here in **Millburn Township**, including **Short Hills, New Jersey**. This is our home base, and we have deep expertise serving clients across **Essex County, NJ**. We are your local, high-end, preferred **photographers** for the area.",
+    },
+    {
+        question: "What is your service area beyond Short Hills, and do you travel to other states?",
+        answer: "Our primary service area covers the entire **Northern New Jersey** region, including towns like **Summit, Maplewood, Livingston, Morristown, and Westfield**. We also frequently serve clients in the **New York Metropolitan Area**, including all five boroughs of **New York City (NYC)**. For major events and commercial projects, we are available to travel to surrounding states, including **Pennsylvania, Delaware, Connecticut, and Southern New York**.",
+    },
+    {
+        question: "What kind of final output can I expect from my photography session, and what is your style?",
+        answer: "You will receive a curated collection of **fully-edited, high-resolution digital files** (JPEGs) via a private, secure online gallery. We specialize in a **vibrant, true-to-life color grading** and a **fine-art storytelling approach**. We focus on creating **professional, print-ready images** that capture the moment authentically. We do not provide **unedited RAW files**, as the final, artistic edit is part of the service you are hiring us for.",
+    },
+    {
+        question: "What is the typical turnaround time for receiving the final edited photos?",
+        answer: "Our commitment is to deliver high-quality results efficiently. The typical turnaround is **7 to 10 business days for portrait and real estate sessions**. For larger events, such as a **corporate retreat or wedding photography**, please allow **3 to 4 weeks** for the full post-production and editing process. We'll provide a firm delivery date in your contract.",
+    },
+    {
+        question: "What is required from me before the photoshoot begins?",
+        answer: "To ensure a seamless shoot, we need two things: 1) A clear **shot list or creative brief** that outlines your essential needs (e.g., specific branding, key people, or angles). 2) For commercial and real estate projects, we need access confirmation and any relevant **brand guidelines**. We prefer to hold a brief **video-call consultation** beforehand to discuss poses and lighting and answer any final questions.",
+    },
+    {
+        question: "Do I receive the full usage rights for the professional photos, especially for business use?",
+        answer: "You will receive a **Commercial Use License** giving you broad permission to use the images for marketing, websites, social media, and print materials. While the **original copyright** remains with the photographer (standard industry practice), you have full, unlimited rights to use the **high-quality photos** to promote your business. Details on licensing are clearly outlined in the final contract.",
+    },
+];
+
+const FAQItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
+    // Check if this specific item is open
+    const isOpen = openIndex === index;
+
+    // Function to toggle the state (open/close)
+    const toggleFAQ = () => {
+        // If it's already open, close it (set to null/undefined). Otherwise, open this item's index.
+        setOpenIndex(isOpen ? null : index);
+    };
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="faq-item rounded-2xl bg-white/5 ring-1 ring-white/10 mb-3 overflow-hidden"
+        >
+            <button
+                className="w-full flex justify-between items-center text-left p-4 md:p-5 font-semibold text-white hover:bg-white/10 transition"
+                onClick={toggleFAQ}
+                aria-expanded={isOpen}
+                aria-controls={`faq-answer-${index}`}
+            >
+                <span dangerouslySetInnerHTML={{ __html: question }} />
+                <span className={`text-xl transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
+                    {isOpen ? '✕' : '+'}
+                </span>
+            </button>
+
+            {/* The collapsing content container */}
+            <div
+                id={`faq-answer-${index}`}
+                className={`transition-[max-height,padding] duration-500 ease-in-out ${isOpen ? 'max-h-[500px] p-4 md:p-5 pt-0' : 'max-h-0'}`}
+            >
+                <div
+                    className="text-zinc-300/90 leading-relaxed border-t border-white/10 pt-4"
+                    dangerouslySetInnerHTML={{ __html: answer }}
+                />
+            </div>
+        </motion.div>
+    );
+};
+
+const FAQSection = () => {
+    // State to manage which FAQ item is currently open. Start with 'null' so all are collapsed.
+    const [openIndex, setOpenIndex] = useState(null);
+
+    return (
+        <section id="faq" className="py-16 md:py-24">
+            <div className="mx-auto max-w-7xl px-4">
+                <SectionHeader
+                    kicker="Information"
+                    title="Frequently Asked Questions"
+                    subtitle="Find quick answers about our photography services, coverage areas, and deliverables."
+                />
+                <div className="mt-10 max-w-4xl mx-auto">
+                    {faqs.map((faq, index) => (
+                        <FAQItem
+                            key={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                            index={index}
+                            openIndex={openIndex}
+                            setOpenIndex={setOpenIndex}
+                        />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+
 export default function VerveSite() {
   const [formData, setFormData] = useState({
     name: '',
@@ -612,6 +715,9 @@ export default function VerveSite() {
           </div>
         </div>
       </section>
+
+      {/* ===================== NEW: FAQ SECTION ===================== */}
+      <FAQSection />
 
       {/* Footer */}
       <footer className="border-t border-white/10">
